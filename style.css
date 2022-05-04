@@ -2,12 +2,12 @@
     background-color: gray;
 }
 
-.div {
-    border: 2px solid black;
-    float: left;
-    padding: 10px;
+#container {
+    display: grid;
+    grid-template-columns: repeat(16, 20px);
 }
 
-.div:nth-child(16n+1) {
-    clear: left;
+.div {
+    border: 2px solid black;
+    padding: 10px;
 }
