@@ -5,6 +5,7 @@
 .div {
     border: 2px solid black;
     float: left;
+    padding: 10px;
 }
 
 .div:nth-child(16n+1) {
