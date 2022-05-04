@@ -1,0 +1,12 @@
+* {
+    background-color: gray;
+}
+
+.div {
+    border: 2px solid black;
+    float: left;
+}
+
+.div:nth-child(16n+1) {
+    clear: left;
+}
