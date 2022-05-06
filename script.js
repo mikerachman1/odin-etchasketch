@@ -31,7 +31,7 @@ const changeSize = (num) => {
             div.style.backgroundColor = 'black';
         }
         div.addEventListener('mouseenter', changeColor);
-        container.setAttribute('style', `display: grid; grid-template-columns: repeat(${num}, 20px)`)
+        container.setAttribute('style', `display: grid; grid-template-columns: repeat(${num}, 1fr); grid-template-rows: repeat(${num}, 1fr); width: 400px; height: 400px;`)
     };
 }
 
