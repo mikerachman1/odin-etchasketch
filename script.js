@@ -35,8 +35,11 @@ const changeSize = (num) => {
     };
 }
 
-changeSize(20);
-
-
 const sizeBtn = document.querySelector('#sizeBtn');
-//sizeBtn.addEventListener('click', )
+
+
+//This changes the size of the grid with user entered prompt when change size button is pressed
+sizeBtn.addEventListener('click', function() {
+    let newSize = prompt('Enter new size of grid', '24');
+    changeSize(newSize);
+});
