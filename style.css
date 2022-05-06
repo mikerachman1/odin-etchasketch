@@ -1,5 +1,22 @@
 * {
     background-color: gray;
+    font-family:'Courier New', Courier, monospace;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+button {
+    background-color: wheat;
+}
+
+h1 {
+    margin-bottom: 0;
 }
 
 #container {

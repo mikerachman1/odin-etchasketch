@@ -40,10 +40,28 @@ const sizeBtn = document.querySelector('#sizeBtn');
 
 //This changes the size of the grid with user entered prompt when change size button is pressed
 sizeBtn.addEventListener('click', function() {
-    let newSize = prompt('Enter new size of grid', '24');
+    let newSize = prompt('Enter number of squares per side', '24');
     if (newSize >= 100) {
         alert("Error: Don't enter number greater than 100")
     } else {
         changeSize(newSize);
     }
 });
+
+
+
+const rainbowBtn = document.querySelector('#rainbow');
+const boxes = container.children
+
+const rainbowEffect = () => {
+    for (const box of boxes) {
+        box.addEventListener('mouseenter', function() {
+            const randColorNum1 = Math.floor(Math.random()*255);
+            const randColorNum2 = Math.floor(Math.random()*255);
+            const randColorNum3 = Math.floor(Math.random()*255);
+        
+            box.style.backgroundColor = `rgb(${randColorNum1}, ${randColorNum2}, ${randColorNum3})`;
+        })
+    };
+};
+rainbowBtn.addEventListener('click', rainbowEffect);
