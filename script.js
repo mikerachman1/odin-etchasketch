@@ -52,7 +52,6 @@ sizeBtn.addEventListener('click', function() {
 
 const rainbowBtn = document.querySelector('#rainbow');
 const boxes = container.children
-
 const rainbowEffect = () => {
     for (const box of boxes) {
         box.addEventListener('mouseenter', function() {
@@ -65,3 +64,16 @@ const rainbowEffect = () => {
     };
 };
 rainbowBtn.addEventListener('click', rainbowEffect);
+
+const greyBtn = document.querySelector('#greyscale');
+const greyEffect = () => {
+    for (const box of boxes) {
+        let opacity = 0;
+        box.addEventListener('mouseenter', function() {
+            box.style.backgroundColor = 'black';
+            opacity += 0.1;
+            box.style.opacity = opacity.toString();
+        });
+    };
+};
+greyBtn.addEventListener('click', greyEffect);
