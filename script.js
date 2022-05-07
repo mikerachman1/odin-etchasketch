@@ -36,8 +36,6 @@ const changeSize = (num) => {
 }
 
 const sizeBtn = document.querySelector('#sizeBtn');
-
-
 //This changes the size of the grid with user entered prompt when change size button is pressed
 sizeBtn.addEventListener('click', function() {
     let newSize = prompt('Enter number of squares per side', '24');
@@ -60,10 +58,12 @@ const rainbowEffect = () => {
             const randColorNum3 = Math.floor(Math.random()*255);
         
             box.style.backgroundColor = `rgb(${randColorNum1}, ${randColorNum2}, ${randColorNum3})`;
+            box.style.opacity = '1';
         })
     };
 };
 rainbowBtn.addEventListener('click', rainbowEffect);
+
 
 const greyBtn = document.querySelector('#greyscale');
 const greyEffect = () => {
@@ -77,3 +77,30 @@ const greyEffect = () => {
     };
 };
 greyBtn.addEventListener('click', greyEffect);
+
+
+
+const eraserBtn = document.querySelector('#eraser');
+const eraserEffect = () => {
+    for (const box of boxes) {
+        box.addEventListener('mouseenter', function() {
+            box.style.backgroundColor = 'white';
+            box.style.opacity = '1';
+        });
+    };
+};
+eraserBtn.addEventListener('click', eraserEffect);
+
+
+
+
+const blackBtn = document.querySelector('#black');
+const blackEffect = () => {
+    for (const box of boxes) {
+        box.addEventListener('mouseenter', function() {
+            box.style.backgroundColor = 'black';
+            box.style.opacity = '1';
+        });
+    };
+};
+blackBtn.addEventListener('click', blackEffect);
